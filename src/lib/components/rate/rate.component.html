@@ -1,0 +1,13 @@
+<div class="fz-rate">
+    <mat-icon class="mat-18" *ngIf="cancel" (click)="clear($event)"
+              [ngClass]="iconCancelClass"
+              [ngStyle]="iconCancelStyle">
+        {{iconCancelName}}
+    </mat-icon>
+    <mat-icon *ngFor="let star of starsArray;let i=index" (click)="rate($event,i)"
+              [ngClass]="(!value || i >= value) ? iconOffClass : iconOnClass"
+              [ngStyle]="(!value || i >= value) ? iconOffStyle : iconOnStyle"
+              class="star-icon-on">
+        {{(!value || i >= value) ? iconOffName : iconOnName}}
+    </mat-icon>
+</div>

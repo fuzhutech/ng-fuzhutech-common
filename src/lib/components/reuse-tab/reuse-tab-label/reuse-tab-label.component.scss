@@ -1,0 +1,19 @@
+//@import '../core/style/variables';
+//@import '../core/style/layout-common';
+@import '../reuse-tab-common';
+
+$mat-menu-vertical-padding: 8px !default;
+$mat-menu-border-radius: 2px !default;
+$mat-menu-submenu-indicator-size: 10px !default;
+
+.fz-reuse-tab-label {
+    @include reuse-tab-label;
+    position: relative;
+
+    .mat-icon {
+        padding-left: 5px;
+        height: 12px;
+        width: 12px;
+        font-size: 14px;
+    }
+}

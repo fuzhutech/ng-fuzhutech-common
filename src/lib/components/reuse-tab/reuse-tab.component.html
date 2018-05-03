@@ -1,0 +1,12 @@
+<mat-tab-group #tabView [(selectedIndex)]="_selectedIndex" dynamicHeight (selectedTabChange)="handleSelection($event)">
+
+    <mat-tab *ngFor="let tab of _tabList; let index = index">
+        <ng-template mat-tab-label>
+            <fz-reuse-tab-label [tab]="tab" [index]="index"
+                                (closeLabelPage)="handleRemove($event)"
+                                (closeOtherLabelPage)="handleRemoveOther($event)"
+                                (closeAllLabelPage)="handleRemoveAll($event)"></fz-reuse-tab-label>
+        </ng-template>
+    </mat-tab>
+
+</mat-tab-group>

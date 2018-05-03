@@ -1,0 +1,29 @@
+<div cdk-overlay-origin
+     class="fz-reuse-tab-label"
+     aria-hidden="true"
+     (dblclick)="closeLabelPageClick()"
+     (contextmenu)="toggle($event)"
+     #origin="cdkOverlayOrigin"
+     #trigger>
+    <span>{{tab.title}}</span>
+    <mat-icon (click)="closeLabelPageClick()">close</mat-icon>
+</div>
+
+<ng-template
+    cdk-connected-overlay
+    hasBackdrop
+    backdropClass="cdk-overlay-transparent-backdrop"
+    [origin]="origin"
+    [open]="panelOpen"
+    [positions]="_positions"
+    [minWidth]="_triggerRect?.width"
+    [offsetY]="_offsetY"
+    (backdropClick)="close()"
+    (attach)="_onAttached()"
+    (detach)="close()">
+    <fz-reuse-tab-menu>
+        <fz-reuse-tab-menu-item (click)="closeLabelPageClick()">关闭标签页</fz-reuse-tab-menu-item>
+        <fz-reuse-tab-menu-item (click)="closeOtherLabelPageClick()">关闭其他标签页</fz-reuse-tab-menu-item>
+        <fz-reuse-tab-menu-item (click)="closeAllLabelPageClick()">关闭所有标签页</fz-reuse-tab-menu-item>
+    </fz-reuse-tab-menu>
+</ng-template>

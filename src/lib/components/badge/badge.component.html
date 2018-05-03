@@ -1,0 +1,20 @@
+<span class="fz-badge fz-badge-status-{{status}}">
+    <span #content>
+        <ng-content></ng-content>
+    </span>
+    <span *ngIf="!showDot"
+          [class.fz-badge-corner]="(content.innerText.length > 0 || content.children.length >0)"
+          [class.fz-badge-alone]="(content.innerText.length == 0 && content.children.length == 0 )">
+        <sup [@enterLeave] class="fz-badge-sup" *ngIf="(count>0)||((count==0)&&showZero)">
+            {{count > overflowCount ? overflowCount + '+' : count}}
+        </sup>
+        <sup [@enterLeave] class="fz-badge-sup" *ngIf="text">
+            {{text}}
+        </sup>
+    </span>
+    <sup [@enterLeave] *ngIf="showDot" class="fz-badge-sup fz-badge-dot"
+         [class.fz-badge-corner]="(content.innerText.length > 0 || content.children.length >0)"
+         [class.fz-badge-alone]="(content.innerText.length == 0 && content.children.length == 0 )">
+        {{''}}
+    </sup>
+</span>

@@ -1,0 +1,32 @@
+<div class="fz-transfer-list-header">
+    <mat-checkbox [(ngModel)]="stat.checkAll" (ngModelChange)="onHandleSelectAll($event)"
+                  [indeterminate]="stat.checkHalf"></mat-checkbox>
+    <span>{{ (stat.checkCount > 0 ? stat.checkCount + '/' : '') + stat.shownCount }} {{ dataSource.length > 1 ? itemsUnit : itemUnit }}</span>
+    <span *ngIf="titleText" class="fz-transfer-list-header-title">{{ titleText }}</span>
+</div>
+<div class="fz-transfer-list-body">
+    <div *ngIf="showSearch" class="fz-transfer-list-body-search-wrapper">
+        <fz-transfer-search (valueChanged)="handleFilter($event)"
+                            (valueClear)="handleClear()"
+                            [placeholder]="searchPlaceholder"
+                            [value]="filter"></fz-transfer-search>
+    </div>
+    <div *ngIf="stat.shownCount === 0" class="fz-transfer-list-body-not-found">{{ notFoundContent }}</div>
+    <ul class="fz-transfer-list-content">
+        <ng-container *ngFor="let item of dataSource">
+            <li *ngIf="!item._hiden" (click)="_handleSelect(item,$event)" class="fz-transfer-list-content-item"
+                [class.fz-transfer-list-content-item-disabled]="item.disabled">
+                <mat-checkbox [ngModel]="item.checked" [disabled]="item.disabled">
+                    <span>
+                        <ng-container *ngIf="!render; else renderContainer">{{ item.title }}</ng-container>
+                        <ng-template #renderContainer [ngTemplateOutlet]="render"
+                                     [ngTemplateOutletContext]="{ $implicit: item }"></ng-template>
+                    </span>
+                </mat-checkbox>
+            </li>
+        </ng-container>
+    </ul>
+</div>
+<div *ngIf="footer" class="fz-transfer-list-footer">
+    <ng-template [ngTemplateOutlet]="footer" [ngTemplateOutletContext]="{ $implicit: direction }"></ng-template>
+</div>

@@ -1,0 +1,73 @@
+.fz-alert {
+    position: relative;
+    padding: 8px 48px 8px 38px;
+
+    border-radius: 4px;
+    color: rgba(0,0,0,.65);
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.fz-alert-icon {
+    font-size: 14px;
+    top: 10px;
+    left: 16px;
+    position: absolute;
+}
+
+.fz-alert-message {
+
+}
+
+.fz-alert-close-icon {
+    font-size: 12px;
+    position: absolute;
+    right: 16px;
+    top: 10px;
+    //height: 12px;
+    //line-height: 12px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+
+.fz-alert-description {
+    font-size: 12px;
+    line-height: 21px;
+}
+
+.fz-alert-success {
+    border: 1px solid #cfefdf;
+    background-color: #ebf8f2;
+
+    .fz-alert-icon {
+        color: #00a854;
+    }
+}
+
+.fz-alert-info {
+    border: 1px solid #d2eafb;
+    background-color: #ecf6fd;
+
+    .fz-alert-icon {
+        color: #108ee9;
+    }
+}
+
+.fz-alert-warn {
+    border: 1px solid #fff3cf;
+    background-color: #fffaeb;
+
+    .fz-alert-icon {
+        color: #ffbf00;
+    }
+}
+
+.fz-alert-error {
+    border: 1px solid #fcdbd9;
+    background-color: #fef0ef;
+
+    .fz-alert-icon {
+        color: #f04134;
+    }
+}

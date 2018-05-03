@@ -1,0 +1,12 @@
+<div [ngClass]="_classMap" *ngIf="display" [@fadeAnimation]>
+    <mat-icon *ngIf="showIcon" class="fz-alert-icon">{{icon}}</mat-icon>
+    <span *ngIf="message" class="fz-alert-message">{{message}}</span>
+    <span *ngIf="closeable || closeText" class="fz-alert-close-icon">
+        <a *ngIf="closeable" (click)="closeAlert($event)">
+            <mat-icon>clear</mat-icon>
+        </a>
+        <a *ngIf="closeText" (click)="closeAlert()">{{ closeText }}</a>
+    </span>
+    <div *ngIf="description" class="fz-alert-description">{{description}}</div>
+
+</div>

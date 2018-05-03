@@ -1,0 +1,21 @@
+<fz-header (toggleSidebar)="openSidebar()" (toggleDarkTheme)="onChage($event)" [homeText]="'Ngx-Fuzhutech-Common'">
+    <div fzHeaderLeftWrap>
+        <span>
+            <a mat-button href="https://github.com/fuzhutech" data-toggle="dropdown" class="dropdown-toggle"
+               target="_blank">GitHub</a>
+        </span>
+        <span>
+            <a mat-button href="http://git.oschina.net/fuzhutech" data-toggle="dropdown" class="dropdown-toggle"
+               target="_blank">OSChina</a>
+        </span>
+
+        <span><a mat-button [routerLink]="['/login']">login</a></span>
+    </div>
+    <div></div>
+    <div fzHeaderRightWrap style="padding: 0 16px">
+        <fz-header-notify></fz-header-notify>
+        <fz-header-task></fz-header-task>
+        <fz-header-icon></fz-header-icon>
+        <fz-header-user></fz-header-user>
+    </div>
+</fz-header>

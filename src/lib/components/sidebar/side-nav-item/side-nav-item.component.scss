@@ -1,0 +1,32 @@
+.nav-item, :host {
+    display: block;
+    position: relative;
+    //border-left: 3px solid transparent;
+    //transition: border-left-color .4s ease;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.nav-item-open {
+    // background-color: #fcfcfc;
+}
+
+.nav-link {
+    // color: rgba(0, 0, 0, .65);
+    text-decoration: none;
+    //padding: 8px 16px;
+    padding: 5px 0;
+    white-space: nowrap;
+    position: relative;
+    display: block;
+    user-select: none;
+}
+
+.nav-group {
+    padding: 5px 0;
+}
+
+// Selected
+.nav-item-selected {
+    border-right: 3px solid;
+}

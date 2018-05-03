@@ -1,0 +1,28 @@
+.fz-anchor-link-title {
+    display: block;
+    position: relative;
+    transition: all .3s;
+    color: rgba(0, 0, 0, .65);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 8px
+}
+
+.fz-anchor-link-title:only-child {
+    margin-bottom: 0
+}
+
+.fz-anchor-link {
+    padding: 8px 0 8px 16px;
+    line-height: 1;
+}
+
+.fz-anchor-link-active > .fz-anchor-link-title {
+    color: #1890ff
+}
+
+.fz-anchor-link .fz-anchor-link {
+    padding-top: 6px;
+    padding-bottom: 6px
+}

@@ -1,0 +1,22 @@
+.fz-transfer {
+    display: flex;
+    flex-direction: row;
+}
+
+.fz-transfer-list {
+}
+
+.fz-transfer-operation {
+    margin: 0 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    button {
+        display: block;
+    }
+
+    button:first-child {
+        margin-bottom: 4px;
+    }
+}

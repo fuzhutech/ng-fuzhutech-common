@@ -1,0 +1,40 @@
+<fz-transfer-list class="fz-transfer-list" [ngStyle]="nzListStyle" data-direction="left"
+                  [titleText]="nzTitles[0]"
+                  [dataSource]="leftDataSource"
+                  [filter]="leftFilter"
+                  [filterOption]="nzFilterOption"
+                  (filterChange)="handleFilterChange($event)"
+                  [render]="render"
+                  [showSearch]="nzShowSearch"
+                  [searchPlaceholder]="nzSearchPlaceholder"
+                  [notFoundContent]="nzNotFoundContent"
+                  [itemUnit]="nzItemUnit"
+                  [itemsUnit]="nzItemsUnit"
+                  [footer]="footer"
+                  (handleSelect)="handleLeftSelect($event)"
+                  (handleSelectAll)="handleLeftSelectAll($event)"></fz-transfer-list>
+<div class="fz-transfer-operation">
+    <button mat-raised-button color="primary" (click)="moveToLeft()" [disabled]="!leftActive">
+        <mat-icon>keyboard_arrow_left</mat-icon>
+        <span *ngIf="nzOperations[1]">{{ nzOperations[1] }}</span>
+    </button>
+    <button mat-raised-button color="primary" (click)="moveToRight()" [disabled]="!rightActive">
+        <mat-icon>keyboard_arrow_right</mat-icon>
+        <span *ngIf="nzOperations[0]">{{ nzOperations[0] }}</span>
+    </button>
+</div>
+<fz-transfer-list class="fz-transfer-list" [ngStyle]="nzListStyle" data-direction="right"
+                  [titleText]="nzTitles[1]"
+                  [dataSource]="rightDataSource"
+                  [filter]="rightFilter"
+                  [filterOption]="nzFilterOption"
+                  (filterChange)="handleFilterChange($event)"
+                  [render]="render"
+                  [showSearch]="nzShowSearch"
+                  [searchPlaceholder]="nzSearchPlaceholder"
+                  [notFoundContent]="nzNotFoundContent"
+                  [itemUnit]="nzItemUnit"
+                  [itemsUnit]="nzItemsUnit"
+                  [footer]="footer"
+                  (handleSelect)="handleRightSelect($event)"
+                  (handleSelectAll)="handleRightSelectAll($event)"></fz-transfer-list>

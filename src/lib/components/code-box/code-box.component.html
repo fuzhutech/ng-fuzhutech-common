@@ -1,0 +1,25 @@
+<section class="code-box" [ngClass]="{'expand':fzExpanded}">
+    <section class="code-box-demo">
+        <div>
+            <ng-content select="[demo]"></ng-content>
+        </div>
+    </section>
+    <section class="code-box-meta markdown">
+        <div class="code-box-title">
+            <a>{{fzTitle}}</a>
+        </div>
+
+        <ng-content select="[intro]"></ng-content>
+        <span class="code-expand-icon"  matTooltip="fzExpanded?'收起代码':'展开代码'" (click)="fzExpanded=!fzExpanded">
+            <img alt="expand code" width="16px" height="16px" src="https://gw.alipayobjects.com/zos/rmsportal/wSAkBuJFbdxsosKKpqyq.svg"
+                 [class.code-expand-icon-show]="fzExpanded" [class.code-expand-icon-hide]="!fzExpanded">
+            <img alt="expand code" width="16px" height="16px" src="https://gw.alipayobjects.com/zos/rmsportal/OpROPHYqWmrMDBFMZtKF.svg"
+                 [class.code-expand-icon-show]="!fzExpanded" [class.code-expand-icon-hide]="fzExpanded">
+        </span>
+    </section>
+    <section class="highlight-wrapper" [ngClass]="{'highlight-wrapper-expand':fzExpanded}">
+        <div class="highlight">
+            <fz-highlight [fzCode]="_code" [fzLanguage]="'typescript'"></fz-highlight>
+        </div>
+    </section>
+</section>

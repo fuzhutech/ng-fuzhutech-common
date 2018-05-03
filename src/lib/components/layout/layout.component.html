@@ -1,0 +1,20 @@
+<ng-content *ngIf="showHeader" select="header"></ng-content>
+
+<main class="siteContainer">
+    <div *ngIf="showSidebar" #sidebarContainerElement class="sidebarContainer"
+         [style.display]="_sidebarOpen? 'flex':'none'">
+        <fz-sidebar [list]="(menuService.change | async)?.menuList || []"></fz-sidebar>
+    </div>
+    <div class="layoutContainer">
+        <div #tabContainerElement [ngStyle]="tabContainerStyle" [style.display]="showReuseTab? 'block':'none'">
+            <fz-reuse-tab></fz-reuse-tab>
+        </div>
+        <div class="contentContainer" [ngStyle]="contentContainerStyle">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+
+    <ng-content></ng-content>
+</main>
+
+<ng-content *ngIf="showFooter" select="footer"></ng-content>
