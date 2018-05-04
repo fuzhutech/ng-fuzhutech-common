@@ -17,7 +17,6 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {FzNoticeIconModule} from '../../../lib/components/notice-icon/notice-icon.module';
 import {FzBadgeModule} from '../../../lib/components/badge/badge.module';
 import {FzAvatarModule} from '../../../lib/components/avatar/avatar.module';
-import {FzDropDownModule} from '../../../lib/components/dropdown/dropdown.module';
 import {FzHeaderModule} from '../../../lib/components/header/header.module';
 import {FzPopoverModule} from '../../../lib/components/popover/popover.module';
 import {FzMessageModule} from '../../../lib/components/message/message.module';
@@ -37,7 +36,6 @@ import {FzMessageModule} from '../../../lib/components/message/message.module';
         MatToolbarModule,
         FzAvatarModule,
         FzBadgeModule,
-        FzDropDownModule,
         FzNoticeIconModule,
         FzHeaderModule,
         FzPopoverModule,

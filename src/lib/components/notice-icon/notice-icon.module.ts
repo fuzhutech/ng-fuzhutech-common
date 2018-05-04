@@ -8,7 +8,6 @@ import {FzPopoverModule} from '../popover/popover.module';
 import {MatIconModule, MatListModule, MatTabsModule, MatCardModule} from '@angular/material';
 import {FzAvatarModule} from '../avatar/avatar.module';
 import {OverlayModule} from '@angular/cdk/overlay';
-import {FzDropDownModule} from '../dropdown/dropdown.module';
 
 const COMPONENTS = [NoticeListComponent, NoticeIconComponent];
 
@@ -29,7 +28,7 @@ const ZORROMODULES = [
 @NgModule({
     imports: [
         CommonModule,
-        FzBadgeModule, FzPopoverModule, FzAvatarModule, FzDropDownModule, OverlayModule,
+        FzBadgeModule, FzPopoverModule, FzAvatarModule, OverlayModule,
         MatTabsModule, MatListModule, MatIconModule, MatCardModule,
         /*AdDescListModule.forRoot(),*/ ...ZORROMODULES
     ],

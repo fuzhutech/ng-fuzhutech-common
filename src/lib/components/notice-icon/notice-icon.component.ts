@@ -3,7 +3,6 @@ import {coerceNumberProperty, coerceBooleanProperty} from '@angular/cdk/coercion
 import {NoticeItem} from './notice-item';
 import {DEFAULT_DROPDOWN_POSITIONS, POSITION_MAP} from '../../core/overlay/overlay-position-map';
 import {ConnectionPositionPair, ConnectedOverlayPositionChange, CdkConnectedOverlay} from '@angular/cdk/overlay';
-import {NzPlacement} from '../dropdown/dropdown.component';
 import {dropDownAnimation} from '../../core/animation/dropdown-animations';
 import {fromEvent} from 'rxjs/observable/fromEvent';
 import {mapTo} from 'rxjs/operators/mapTo';
@@ -12,6 +11,8 @@ import {merge} from 'rxjs/operators/merge';
 import {Subject} from 'rxjs/Subject';
 import {debounceTime} from 'rxjs/operators/debounceTime';
 import {Subscription} from 'rxjs/Subscription';
+
+export type NzPlacement = 'bottomLeft' | 'bottomCenter' | 'bottomRight' | 'topLeft' | 'topCenter' | 'topRight';
 
 @Component({
     selector: 'fz-notice-icon',

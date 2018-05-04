@@ -13,7 +13,6 @@ import {ReuseTabLabelComponent} from './reuse-tab-label/reuse-tab-label.componen
 import {OverlayModule} from '@angular/cdk/overlay';
 import {ReuseTabMenuItemComponent} from './reuse-tab-menu-item/reuse-tab-menu-item.component';
 import {MAT_MENU_DEFAULT_OPTIONS, ReuseTabMenuComponent} from './reuse-tab-menu/reuse-tab-menu.component';
-import {FzDropDownModule} from '../dropdown/dropdown.module';
 
 const MATERIALMODULES = [MatTabsModule];
 
@@ -28,7 +27,6 @@ const MATERIALMODULES = [MatTabsModule];
         MatOptionModule,
         MatMenuModule,
         MatSelectModule,
-        FzDropDownModule,
         ...MATERIALMODULES],
     declarations: [ReuseTabLabelComponent, ReuseTabMenuComponent, ReuseTabMenuItemComponent, ...COMPONENTS],
     exports: [ReuseTabLabelComponent, ReuseTabMenuComponent, ReuseTabMenuItemComponent, ...COMPONENTS],

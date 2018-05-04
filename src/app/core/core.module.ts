@@ -33,6 +33,8 @@ import 'rxjs/add/operator/withLatestFrom';
 import 'rxjs/add/operator/shareReplay';
 import 'rxjs/add/operator/switchMap';*/
 
+import {loadSvgResource} from '../utils/svg.util';
+
 @NgModule({
     imports: [
         CommonModule,
@@ -56,6 +58,6 @@ export class CoreModule {
             throw new Error('模块已经存在，不能再次加载!');
         }
 
-        // loadSvgResource(ir, ds);
+        loadSvgResource(ir, ds);
     }
 }

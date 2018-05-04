@@ -47,10 +47,6 @@ const routes: Routes = [
                 loadChildren: './fz-demo-code-box/fz-demo-code-box.module#FzDemoCodeBoxModule',
             },
             {
-                path: 'dropdown',
-                loadChildren: './fz-demo-dropdown/fz-demo-dropdown.module#FzDemoDropdownModule',
-            },
-            {
                 path: 'highlight',
                 loadChildren: './fz-demo-highlight/fz-demo-highlight.module#FzDemoHighlightModule',
             },

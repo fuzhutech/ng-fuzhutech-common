@@ -13,7 +13,7 @@ const routes: Routes = [
             {
                 path: 'auth',
                 loadChildren: './auth/auth.module#AuthModule',
-                data: {title: 'auth', module: 'auth', power: 'SHOW'}
+                data: {layout: 'full'}
             },
             {
                 path: 'forms',

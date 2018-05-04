@@ -1,4 +1,4 @@
-<fz-layout [sidebarOpen]="_sidebarOpen">
+<fz-layout [sidebarOpen]="_sidebarOpen" [modulesInfo]="_modulesInfo" [loadMenuData]="loadMenuData">
     <header>
         <fz-app-header (toggle)="toggleSidebar()" (toggleDarkTheme)="switchTheme($event)"></fz-app-header>
     </header>

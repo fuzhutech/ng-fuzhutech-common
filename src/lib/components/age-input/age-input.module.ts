@@ -1,7 +1,7 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {MatDatepickerModule, MatFormFieldModule, MatInputModule, MatButtonModule, MatButtonToggleModule} from '@angular/material';
+import {MatDatepickerModule, MatFormFieldModule, MatInputModule, MatButtonModule, MatButtonToggleModule, MatNativeDateModule} from '@angular/material';
 import {AgeInputComponent} from './age-input.component';
 
 @NgModule({
@@ -12,7 +12,8 @@ import {AgeInputComponent} from './age-input.component';
         MatFormFieldModule,
         MatInputModule,
         MatButtonModule,
-        MatButtonToggleModule
+        MatButtonToggleModule,
+        MatNativeDateModule
     ],
     declarations: [AgeInputComponent],
     exports: [AgeInputComponent]

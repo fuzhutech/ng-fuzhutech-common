@@ -28,7 +28,6 @@ import {Observable} from 'rxjs/Observable';
 import {merge} from 'rxjs/operators/merge';
 import {mapTo} from 'rxjs/operators/mapTo';
 import {fromEvent} from 'rxjs/observable/fromEvent';
-import {DropDownDirective} from '../dropdown/dropdown.directive';
 import {debounceTime} from 'rxjs/operators/debounceTime';
 import {Subscription} from 'rxjs/Subscription';
 import {Subject} from 'rxjs/Subject';
